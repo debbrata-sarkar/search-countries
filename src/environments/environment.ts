@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  COUNTRIES_API_URL: `https://restcountries.eu/`,
+  FLAGS_API_URL: `https://www.countryflags.io/`
 };
 
 /*

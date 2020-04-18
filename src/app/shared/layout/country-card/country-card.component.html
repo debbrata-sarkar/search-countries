@@ -1,0 +1,22 @@
+<div class="countryDetails">
+  <img src="{{country.flag}}" alt="country.name" />
+  <div class="details" *ngIf="country">
+    <h2>{{country.name}}</h2>
+    <p>Capital: {{country.capital}}</p>
+    <p>Region: {{country.region}}</p>
+    <p>Population: {{country.population}}</p>
+    <p>Area: {{country.area}}</p>
+    <p>Currencies: 
+      <span *ngFor="let c of country.currencies">
+        {{c.code}} ({{c.symbol}}) 
+        <span *ngIf="country.currencies.length > 1">,&nbsp;</span>
+      </span>
+    </p>
+    <p>Languages: 
+      <span *ngFor="let l of country.languages">
+        {{l.name}}
+        <span *ngIf="country.languages.length > 1">,&nbsp;</span>
+      </span>
+    </p>
+  </div>
+</div>

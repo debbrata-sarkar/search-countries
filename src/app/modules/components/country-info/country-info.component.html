@@ -1,0 +1,16 @@
+<div class="search">
+  <button><i class="material-icons">search</i></button>
+  <input type="text" id="search" (keyup)="getCountryList($event)" placeholder="Search for country name or partial name" />
+</div>
+
+<section class="searched-countries">
+  <div class="country" (click)="showCountryDetails($event,user)" *ngFor="let user of countryList">
+    <app-search-card [user]="user"></app-search-card>
+  </div>
+</section>
+
+<section class="country-details">
+  <div *ngFor="let country of countryDetails">
+    <app-country-card *ngIf="country" [country]="country"></app-country-card>
+  </div>
+</section>
